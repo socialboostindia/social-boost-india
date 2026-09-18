@@ -24,6 +24,21 @@ footer{background:#111;color:#fff;text-align:center;padding:18px}
 </style>
 </head>
 <body>
+  <header class="top">
+  <div class="logo">Follower<span>Boost</span></div>
+</header>
+
+<section class="hero">
+  <h1>Social Media Services</h1>
+  <p>
+    Instagram, YouTube और दूसरे सोशल मीडिया के लिए
+    आसान और भरोसेमंद सेवाएँ।
+  </p>
+
+  <a href="#panel" class="hero-btn">
+    Services देखें
+  </a>
+</section>
 <header>
 <h1>Social Boost India</h1>
 <nav>
@@ -108,6 +123,77 @@ footer{background:#111;color:#fff;text-align:center;padding:18px}
 </section>
 
 <footer>© 2026 Social Boost India</footer>
+  <section id="panel" class="panel-section">
+
+  <h2>🛒 Social Media Service Panel</h2>
+
+  <div class="panel">
+
+    <div class="search">
+      🔍
+      <input
+        type="text"
+        id="search"
+        placeholder="Service खोजें..."
+        onkeyup="searchService()">
+    </div>
+
+    <label>Category</label>
+
+    <select id="category" onchange="filterCategory()">
+      <option value="all">📱 सभी Services</option>
+      <option value="instagram">📸 Instagram Services</option>
+      <option value="youtube">▶️ YouTube Services</option>
+      <option value="editing">🎬 Editing Services</option>
+    </select>
+
+    <div id="serviceList">
+
+      <div class="service instagram">
+        📸 Instagram Services
+      </div>
+
+      <div class="service instagram">
+        ❤️ Instagram Likes
+      </div>
+
+      <div class="service instagram">
+        👥 Instagram Followers
+      </div>
+
+      <div class="service instagram">
+        💬 Instagram Comments
+      </div>
+
+      <div class="service youtube">
+        ▶️ YouTube Views
+      </div>
+
+      <div class="service youtube">
+        ▶️ YouTube Shorts
+      </div>
+
+      <div class="service youtube">
+        ⏱️ YouTube Watch Time
+      </div>
+
+      <div class="service editing">
+        🎬 Video Editing
+      </div>
+
+      <div class="service editing">
+        🎨 Post Design
+      </div>
+
+    </div>
+
+    <button class="submit-btn" onclick="orderService()">
+      Submit
+    </button>
+
+  </div>
+
+  </section>
 </body>
 </html>
 <h2>💳 Payment करें</h2>
@@ -121,4 +207,5 @@ footer{background:#111;color:#fff;text-align:center;padding:18px}
    style="display:inline-block;padding:12px 25px;background:#28a745;color:white;text-decoration:none;border-radius:8px;">
    💰 Pay Now
 </a>
+
 
