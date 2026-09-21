@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Social Boost India | Social Media Services</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#111936;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:#080b24;
+    border-bottom:1px solid #4033a5;
+    padding:16px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#9b3cff;
+}
+
+.tagline{
+    display:block;
+    font-size:10px;
+    color:#ddd;
+    margin-top:3px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#b66cff;
+}
+
+/* HERO */
+.hero{
+    min-height:510px;
+    padding:70px 7%;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 75% 40%,#6828d9 0%,transparent 32%),
+    linear-gradient(120deg,#07091e,#11113d,#21084b);
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    background:#3420a8;
+    border-radius:30px;
+    padding:8px 18px;
+    margin-bottom:18px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:50px;
+    line-height:1.08;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#a94cff;
+}
+
+.hero p{
+    color:#ddd;
+    font-size:18px;
+    line-height:1.6;
+    max-width:650px;
+    margin-bottom:28px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 23px;
+    background:linear-gradient(90deg,#7b2cff,#a13cff);
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    margin:4px;
+}
+
+.btn:hover{
+    box-shadow:0 8px 20px rgba(123,44,255,.3);
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid white;
+}
+
+/* SECTIONS */
+section{
+    padding:60px 6%;
+}
+
+.title{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.title span{
+    color:#7b2cff;
+}
+
+.subtitle{
+    text-align:center;
+    color:#555;
+    margin-bottom:35px;
+}
+
+/* SERVICES */
+.service-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:white;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 7px 25px rgba(0,0,0,.08);
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    background:linear-gradient(135deg,#7130ff,#ff3e9e);
+    color:white;
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#555;
+    line-height:1.5;
+}
+
+.service-price{
+    font-size:24px;
+    font-weight:bold;
+    color:#6d28d9;
+    margin:18px 0 12px;
+}
+
+/* FOLLOWERS & LIKES */
+.followers{
+    background:
+    radial-gradient(circle at 20% 50%,#27166e,transparent 35%),
+    #070a27;
+    color:white;
+}
+
+.followers .subtitle{
+    color:#ccc;
+}
+
+.follower-grid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.follower-box{
+    border:1px solid #6048db;
+    border-radius:18px;
+    padding:20px;
+    background:rgba(12,15,55,.85);
+}
+
+.follower-heading{
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.package-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.follower-package{
+    border:1px solid #4c8cff;
+    border-radius:12px;
+    padding:14px 6px;
+    text-align:center;
+    background:#0d1239;
+}
+
+.follower-package h4{
+    font-size:19px;
+    color:white;
+}
+
+.follower-package p{
+    color:#ddd;
+    font-size:13px;
+    margin:5px 0;
+}
+
+.follower-package .rate{
+    color:#bd55ff;
+    font-size:20px;
+    font-weight:bold;
+    margin:7px 0;
+}
+
+.small-btn{
+    display:inline-block;
+    background:#782cff;
+    color:white;
+    text-decoration:none;
+    padding:7px 11px;
+    border-radius:7px;
+    font-size:12px;
+}
+
+.custom{
+    grid-column:1/-1;
+    background:linear-gradient(90deg,#5621db,#832cff);
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    margin-top:5px;
+}
+
+.custom a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* GROWTH */
+.growth{
+    background:#f7f8fc;
+}
+
+.growth-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.growth-card{
+    background:white;
+    border-radius:17px;
+    padding:28px;
+    box-shadow:0 7px 22px rgba(0,0,0,.08);
+}
+
+.growth-card h3{
+    font-size:23px;
+}
+
+.growth-price{
+    color:#702cff;
+    font-size:29px;
+    font-weight:bold;
+    margin:8px 0 15px;
+}
+
+.growth-card ul{
+    list-style:none;
+    line-height:2;
+    color:#333;
+}
+
+.growth-card li::before{
+    content:"✓ ";
+    color:#7b2cff;
+    font-weight:bold;
+}
+
+/* WHY */
+.why-grid{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.why-card{
+    text-align:center;
+    padding:22px 12px;
+}
+
+.why-icon{
+    width:58px;
+    height:58px;
+    margin:auto auto 12px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    background:#eee7ff;
+}
+
+.why-card h3{
+    margin-bottom:8px;
+}
+
+.why-card p{
+    color:#666;
+    font-size:14px;
+}
+
+/* PAYMENT */
+.payment{
+    background:#080b24;
+    color:white;
+}
+
+.payment-box{
+    max-width:1000px;
+    margin:auto;
+    border:1px solid #5b46d6;
+    border-radius:18px;
+    padding:30px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    gap:25px;
+}
+
+.payment-info{
+    flex:1;
+}
+
+.payment-info h3{
+    font-size:27px;
+    margin-bottom:12px;
+}
+
+.payment-info p{
+    color:#ddd;
+    line-height:1.6;
+}
+
+.upi{
+    background:#171b49;
+    border:1px solid #5d49d9;
+    border-radius:10px;
+    padding:13px;
+    display:inline-block;
+    margin:15px 0;
+}
+
+.qr{
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.qr img{
+    width:180px;
+    height:180px;
+    display:block;
+}
+
+.qr p{
+    color:#111;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+    background:white;
+}
+
+.contact p{
+    color:#555;
+    line-height:1.7;
+    margin:15px 0;
+}
+
+.whatsapp{
+    background:#16a34a;
+}
+
+.whatsapp:hover{
+    background:#12833c;
+}
+
+/* FOOTER */
+footer{
+    background:#080b24;
+    color:#aaa;
+    text-align:center;
+    padding:25px;
+}
+
+.footer-logo{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.footer-logo span{
+    color:#a13cff;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+    header{
+        padding:14px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        min-height:500px;
+        padding:60px 6%;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .service-grid,
+    .follower-grid,
+    .growth-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .payment-box{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media(max-width:480px){
+
+    section{
+        padding:50px 5%;
+    }
+
+    .title{
+        font-size:28px;
+    }
+
+    .package-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .follower-package h4{
+        font-size:17px;
+    }
+
+    .follower-package .rate{
+        font-size:18px;
+    }
+}
+
+/* ORDER MODAL */
+.order-modal{
+    display:none;
+    position:fixed;
+    z-index:10000;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+}
+.order-box{
+    width:100%;
+    max-width:430px;
+    max-height:92vh;
+    overflow-y:auto;
+    background:white;
+    color:#111936;
+    border-radius:18px;
+    padding:24px;
+    position:relative;
+    box-shadow:0 15px 50px rgba(0,0,0,.35);
+}
+.order-box h2{
+    text-align:center;
+    margin-bottom:8px;
+}
+.order-selected{
+    text-align:center;
+    color:#6d28d9;
+    font-weight:bold;
+    margin-bottom:16px;
+}
+.order-close{
+    position:absolute;
+    right:16px;
+    top:8px;
+    font-size:30px;
+    cursor:pointer;
+    color:#555;
+}
+.order-box label{
+    display:block;
+    font-weight:bold;
+    margin:13px 0 6px;
+}
+.order-box input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:9px;
+    font-size:14px;
+}
+.order-qr{
+    text-align:center;
+    background:#f7f7fb;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:12px;
+    margin-top:14px;
+}
+.order-qr img{
+    width:180px;
+    height:180px;
+    display:block;
+    margin:8px auto;
+}
+.order-submit{
+    width:100%;
+    border:0;
+    border-radius:10px;
+    padding:13px;
+    margin-top:16px;
+    background:linear-gradient(90deg,#7b2cff,#a13cff);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.order-cancel{
+    width:100%;
+    border:1px solid #bbb;
+    border-radius:10px;
+    padding:11px;
+    margin-top:9px;
+    background:white;
+    color:#333;
+    font-size:15px;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div>
+    <div class="logo">
+        Social <span>Boost</span> India
+    </div>
+
+    <span class="tagline">
+        More Followers • More Likes • More Growth
+    </span>
+</div>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#followers">Followers & Likes</a>
+    <a href="#payment">Payment</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+    Grow • Create • Connect
+</div>
+
+<h1>
+    Grow Your Social Media
+    <span>Professionally</span>
+</h1>
+
+<p>
+    Instagram, YouTube और दूसरे social media platforms
+    के लिए professional video editing, creative design
+    और growth guidance services.
+</p>
+
+<a href="#services" class="btn">
+    💬 Services देखें
+</a>
+
+<a href="#contact" class="btn btn-outline">
+    Contact करें
+</a>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+<h2 class="title">
+    हमारी <span>Services</span>
+</h2>
+
+<p class="subtitle">
+    अपने social media को बेहतर बनाने के लिए हमारी services चुनें।
+</p>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<div class="icon">🎬</div>
+
+<h3>Video Editing</h3>
+
+<p>
+Instagram Reels, YouTube Shorts और
+social media videos की professional editing.
+</p>
+
+<div class="service-price">
+₹199 से
+</div>
+
+<button type="button" class="btn" onclick="openOrder('Video Editing - ₹199 से')">Order करें</button>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="icon">🎨</div>
+
+<h3>Post Design</h3>
+
+<p>
+Instagram और दूसरे social media platforms
+के लिए attractive creative posts.
+</p>
+
+<div class="service-price">
+₹149 से
+</div>
+
+<button type="button" class="btn" onclick="openOrder('Post Design - ₹149 से')">Order करें</button>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="icon">📈</div>
+
+<h3>Growth Guidance</h3>
+
+<p>
+Content strategy, profile improvement और
+organic social media growth की guidance.
+</p>
+
+<div class="service-price">
+₹299 से
+</div>
+
+<button type="button" class="btn" onclick="openOrder('Growth Guidance - ₹299 से')">Order करें</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOLLOWERS & LIKES -->
+<section class="followers" id="followers">
+
+<h2 class="title">
+    Follower & <span>Like Packages</span>
+</h2>
+
+<p class="subtitle">
+    उपलब्ध Followers और Likes packages देखें।
+</p>
+
+<div class="follower-grid">
+
+
+<!-- FOLLOWERS -->
+<div class="follower-box">
+
+<div class="follower-heading">
+📸 Instagram Followers Packages
+</div>
+
+<div class="package-grid">
+
+<div class="follower-package">
+<h4>300</h4>
+<p>Followers</p>
+<div class="rate">₹69</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 300 Followers - ₹69')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>500</h4>
+<p>Followers</p>
+<div class="rate">₹109</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 500 Followers - ₹109')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>1K</h4>
+<p>Followers</p>
+<div class="rate">₹199</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 1K Followers - ₹199')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>2K</h4>
+<p>Followers</p>
+<div class="rate">₹399</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 2K Followers - ₹399')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>5K</h4>
+<p>Followers</p>
+<div class="rate">₹999</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 5K Followers - ₹999')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>10K</h4>
+<p>Followers</p>
+<div class="rate">₹1,999</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 10K Followers - ₹1,999')">Order</button>
+</div>
+
+<div class="custom">
+<a href="javascript:void(0)" onclick="openOrder('100 से 100K Followers - Custom Order')">
+100 से 100K Followers — Custom Order
+</a>
+</div>
+
+</div>
+</div>
+
+
+<!-- LIKES -->
+<div class="follower-box">
+
+<div class="follower-heading">
+❤️ Instagram Likes Packages
+</div>
+
+<div class="package-grid">
+
+<div class="follower-package">
+<h4>300</h4>
+<p>Likes</p>
+<div class="rate">₹69</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 300 Likes - ₹69')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>500</h4>
+<p>Likes</p>
+<div class="rate">₹159</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 500 Likes - ₹159')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>1K</h4>
+<p>Likes</p>
+<div class="rate">₹259</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 1K Likes - ₹259')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>2K</h4>
+<p>Likes</p>
+<div class="rate">₹459</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 2K Likes - ₹459')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>5K</h4>
+<p>Likes</p>
+<div class="rate">₹959</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 5K Likes - ₹959')">Order</button>
+</div>
+
+<div class="follower-package">
+<h4>10K</h4>
+<p>Likes</p>
+<div class="rate">₹1,999</div>
+<button type="button" class="small-btn" onclick="openOrder('Instagram 10K Likes - ₹1,999')">Order</button>
+</div>
+
+<div class="custom">
+<a href="javascript:void(0)" onclick="openOrder('100 से 100K Likes - Custom Order')">
+100 से 100K Likes — Custom Order
+</a>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GROWTH PACKAGES -->
+<section class="growth">
+
+<h2 class="title">
+    <span>🚀 Growth Packages</span>
+</h2>
+
+<p class="subtitle">
+    अपने account को बेहतर तरीके से manage करने के लिए packages चुनें।
+</p>
+
+<div class="growth-grid">
+
+<div class="growth-card">
+
+<h3>Starter</h3>
+
+<div class="growth-price">₹299</div>
+
+<ul>
+<li>Profile Review</li>
+<li>Content Guidance</li>
+<li>Hashtag Guidance</li>
+<li>Basic Growth Tips</li>
+</ul>
+
+<button type="button" class="btn" onclick="openOrder('Starter Growth Package - ₹299')">Order करें</button>
+
+</div>
+
+
+<div class="growth-card">
+
+<h3>Standard</h3>
+
+<div class="growth-price">₹599</div>
+
+<ul>
+<li>Profile Optimization</li>
+<li>Content Strategy</li>
+<li>Reels Guidance</li>
+<li>Engagement Tips</li>
+</ul>
+
+<button type="button" class="btn" onclick="openOrder('Standard Growth Package - ₹599')">Order करें</button>
+
+</div>
+
+
+<div class="growth-card">
+
+<h3>Professional</h3>
+
+<div class="growth-price">₹999</div>
+
+<ul>
+<li>Complete Profile Review</li>
+<li>Content Planning</li>
+<li>Growth Strategy</li>
+<li>Monthly Guidance</li>
+</ul>
+
+<button type="button" class="btn" onclick="openOrder('Professional Growth Package - ₹999')">Order करें</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section>
+
+<h2 class="title">
+    हमें <span>क्यों चुनें?</span>
+</h2>
+
+<p class="subtitle">
+    आसान और professional social media services.
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">
+<div class="why-icon">⚡</div>
+<h3>Fast Service</h3>
+<p>काम को समय पर पूरा करने की कोशिश।</p>
+</div>
+
+<div class="why-card">
+<div class="why-icon">₹</div>
+<h3>Affordable Price</h3>
+<p>छोटे budget के लिए भी service options.</p>
+</div>
+
+<div class="why-card">
+<div class="why-icon">📱</div>
+<h3>Mobile Friendly</h3>
+<p>Website mobile users के लिए आसान है।</p>
+</div>
+
+<div class="why-card">
+<div class="why-icon">🎧</div>
+<h3>Customer Support</h3>
+<p>Order और service से संबंधित सहायता।</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAYMENT -->
+<section class="payment" id="payment">
+
+<h2 class="title">
+    💳 Payment
+</h2>
+
+<p class="subtitle" style="color:#ccc;">
+    UPI के द्वारा payment करें।
+</p>
+
+<div class="payment-box">
+
+<div class="payment-info">
+
+<h3>Social Boost India</h3>
+
+<p>
+अपना package चुनें और payment के बाद
+WhatsApp पर order details भेजें।
+</p>
+
+<div class="upi">
+<strong>UPI ID</strong><br>
+9015009655@ybl
+</div>
+
+<br>
+
+<a href="upi://pay?pa=9015009655@ybl&pn=Social%20Boost%20India&cu=INR"
+class="btn">
+💳 Pay Now
+</a>
+
+</div>
+
+
+<div class="qr">
+
+<img
+src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi%3A%2F%2Fpay%3Fpa%3D9015009655%40ybl%26pn%3DSocial%2520Boost%2520India%26cu%3DINR"
+alt="UPI QR Code">
+
+<p>
+Scan & Pay
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<h2 class="title">
+    Order / <span>Contact</span>
+</h2>
+
+<p>
+किसी भी service के लिए WhatsApp पर message करें।
+<br>
+अपनी जरूरत और package बताएं।
+</p>
+
+<a
+href="https://wa.me/919015009655?text=Hello%20Social%20Boost%20India%2C%20mujhe%20aapki%20service%20ke%20baare%20me%20jaankari%20chahiye."
+class="btn whatsapp"
+target="_blank">
+
+📲 WhatsApp पर Contact करें
+
+</a>
+
+<p>
+WhatsApp: <strong>9015009655</strong>
+</p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-logo">
+Social <span>Boost</span> India
+</div>
+
+© 2026 Social Boost India. All Rights Reserved.
+
+</footer>
+
+
+<!-- ORDER FORM POPUP -->
+<div id="orderModal" class="order-modal">
+  <div class="order-box">
+    <span class="order-close" onclick="closeOrder()">×</span>
+
+    <h2>🛒 Order करें</h2>
+    <div id="selectedPackage" class="order-selected"></div>
+
+    <label>Instagram Profile / Post Link</label>
+    <input type="url" id="instagramLink" placeholder="https://instagram.com/yourusername">
+
+    <label>आपका नाम</label>
+    <input type="text" id="customerName" placeholder="अपना नाम लिखें">
+
+    <div class="order-qr">
+      <b>💳 QR Scan करके Payment करें</b>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi%3A%2F%2Fpay%3Fpa%3D9015009655%40ybl%26pn%3DSocial%2520Boost%2520India%26cu%3DINR" alt="UPI QR Code">
+      <div>UPI: <b>9015009655@ybl</b></div>
+    </div>
+
+    <label>Transaction ID / UTR Number</label>
+    <input type="text" id="transactionId" placeholder="Payment के बाद UTR/Transaction ID">
+
+    <button type="button" class="order-submit" onclick="submitOrder()">
+      ✅ Order Submit करें
+    </button>
+    <button type="button" class="order-cancel" onclick="closeOrder()">
+      Cancel
+    </button>
+  </div>
+</div>
+
+<script>
+function openOrder(packageName){
+    document.getElementById("selectedPackage").textContent =
+        "Selected: " + packageName;
+    document.getElementById("orderModal").style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+
+function closeOrder(){
+    document.getElementById("orderModal").style.display = "none";
+    document.body.style.overflow = "";
+}
+
+window.addEventListener("click", function(e){
+    if(e.target === document.getElementById("orderModal")){
+        closeOrder();
+    }
+});
+
+function submitOrder(){
+    const packageName = document.getElementById("selectedPackage").textContent;
+    const name = document.getElementById("customerName").value.trim();
+    const insta = document.getElementById("instagramLink").value.trim();
+    const txn = document.getElementById("transactionId").value.trim();
+
+    if(!name || !insta || !txn){
+        alert("कृपया Name, Instagram Link और Transaction ID भरें।");
+        return;
+    }
+
+    const message =
+        "🛒 NEW ORDER%0A%0A" +
+        encodeURIComponent(packageName) + "%0A" +
+        "👤 Name: " + encodeURIComponent(name) + "%0A" +
+        "📸 Instagram Link: " + encodeURIComponent(insta) + "%0A" +
+        "💳 Transaction ID: " + encodeURIComponent(txn);
+
+    window.open(
+        "https://wa.me/919015009655?text=" + message,
+        "_blank"
+    );
+}
+</script>
+
+</body>
+  </html>
