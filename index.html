@@ -1053,6 +1053,182 @@ Social <span>Boost</span> India
 © 2026 Social Boost India. All Rights Reserved.
 
 </footer>
+    <!-- ORDER POPUP -->
+<div id="orderModal" class="order-modal">
+  <div class="order-box">
+
+    <span class="close-order" onclick="closeOrder()">×</span>
+
+    <h2>🛒 Order करें</h2>
+
+    <p id="selectedPackage">Selected Package</p>
+
+    <label>Instagram Profile Link</label>
+    <input
+      type="url"
+      id="instagramLink"
+      placeholder="https://instagram.com/yourusername"
+    >
+
+    <label>अपना नाम</label>
+    <input
+      type="text"
+      id="customerName"
+      placeholder="अपना नाम लिखें"
+    >
+
+    <h3>💳 Payment करें</h3>
+
+    <div class="qr-box">
+      <p>QR Code Scan करके Payment करें</p>
+
+      <!-- यहाँ अपना QR image लगाएं -->
+      <img
+        src="qr.png"
+        alt="Payment QR Code"
+        class="payment-qr"
+      >
+
+      <p><b>Payment के बाद नीचे Transaction ID डालें</b></p>
+    </div>
+
+    <input
+      type="text"
+      id="transactionId"
+      placeholder="Transaction ID / UTR Number"
+    >
+
+    <button class="submit-order" onclick="submitOrder()">
+      ✅ Order Submit करें
+    </button>
+
+  </div>
+</div>
+
+<style>
+.order-modal{
+  display:none;
+  position:fixed;
+  z-index:9999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.75);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.order-box{
+  background:white;
+  width:100%;
+  max-width:420px;
+  max-height:90vh;
+  overflow-y:auto;
+  border-radius:18px;
+  padding:25px;
+  position:relative;
+  box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+
+.order-box h2{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.order-box label{
+  display:block;
+  margin-top:15px;
+  margin-bottom:6px;
+  font-weight:bold;
+}
+
+.order-box input{
+  width:100%;
+  padding:13px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.close-order{
+  position:absolute;
+  right:18px;
+  top:10px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+.qr-box{
+  text-align:center;
+  margin-top:15px;
+  padding:15px;
+  border:1px solid #ddd;
+  border-radius:12px;
+}
+
+.payment-qr{
+  width:180px;
+  height:180px;
+  object-fit:contain;
+  margin:10px auto;
+}
+
+.submit-order{
+  width:100%;
+  margin-top:18px;
+  padding:14px;
+  border:0;
+  border-radius:10px;
+  background:linear-gradient(90deg,#6d28d9,#a855f7);
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+</style>
+
+<script>
+function openOrder(packageName){
+  document.getElementById("selectedPackage").innerText =
+    "आपने चुना: " + packageName;
+
+  document.getElementById("orderModal").style.display = "flex";
+}
+
+function closeOrder(){
+  document.getElementById("orderModal").style.display = "none";
+}
+
+function submitOrder(){
+
+  let name = document.getElementById("customerName").value;
+  let insta = document.getElementById("instagramLink").value;
+  let transaction = document.getElementById("transactionId").value;
+  let packageName = document.getElementById("selectedPackage").innerText;
+
+  if(name === "" || insta === "" || transaction === ""){
+    alert("कृपया Name, Instagram Link और Transaction ID भरें।");
+    return;
+  }
+
+  let message =
+    "🛒 NEW ORDER%0A%0A" +
+    packageName + "%0A" +
+    "👤 Name: " + name + "%0A" +
+    "📸 Instagram: " + insta + "%0A" +
+    "💳 Transaction ID: " + transaction;
+
+  /* अपना WhatsApp नंबर यहाँ डालें */
+  let whatsappNumber = "91XXXXXXXXXX";
+
+  window.open(
+    "https://wa.me/" + whatsappNumber + "?text=" + message,
+    "_blank"
+  );
+}
+</script>
 
 </body>
   </html>
